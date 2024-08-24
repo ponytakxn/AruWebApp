@@ -1,9 +1,4 @@
 // @ts-nocheck
-// get DOM elements
-var dataChannelLog = document.getElementById('data-channel'),
-    iceConnectionLog = document.getElementById('ice-connection-state'),
-    iceGatheringLog = document.getElementById('ice-gathering-state'),
-    signalingLog = document.getElementById('signaling-state');
 
 // peer connection
 var pc = null;
