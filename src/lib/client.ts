@@ -97,7 +97,7 @@ function negotiate() {
         }
 
         console.log(offer.sdp);
-        return fetch('https://10.66.32.139:8080/offer', {
+        return fetch('https://0.0.0.0:8080/offer', {
             body: JSON.stringify({
                 sdp: offer.sdp,
                 type: offer.type,
@@ -146,15 +146,12 @@ export function start() {
             }, 1000);
         });
         dc.addEventListener('message', (evt) => {
-
             if (evt.data.substring(0, 4) === 'pong') {
                 var elapsed_ms = current_stamp() - parseInt(evt.data.substring(5), 10);
             }
         });
     }
-
-    // Build media constraints.
-
+ 
     const constraints = {
         audio: false,
         video: false
